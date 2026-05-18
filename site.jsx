@@ -537,6 +537,7 @@ function Footer() {
           <div>
             <h4>Contact</h4>
             <p>For questions about the workshop, papers, or sponsorship,<br />reach out to the organizing committee.</p>
+            <p style={{ marginTop: 12 }}><a href="mailto:human-robot-dialogue@googlegroups.com">human-robot-dialogue@googlegroups.com</a></p>
           </div>
         </div>
         <div className="foot-logo-wrap">

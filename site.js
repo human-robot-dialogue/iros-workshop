@@ -663,7 +663,13 @@ function Footer() {
     style: {
       marginTop: 12
     }
-  }, "Co-located with IROS 2026.")), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h4", null, "Contact"), /*#__PURE__*/React.createElement("p", null, "For questions about the workshop, papers, or sponsorship,", /*#__PURE__*/React.createElement("br", null), "reach out to the organizing committee."))), /*#__PURE__*/React.createElement("div", {
+  }, "Co-located with IROS 2026.")), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h4", null, "Contact"), /*#__PURE__*/React.createElement("p", null, "For questions about the workshop, papers, or sponsorship,", /*#__PURE__*/React.createElement("br", null), "reach out to the organizing committee."), /*#__PURE__*/React.createElement("p", {
+    style: {
+      marginTop: 12
+    }
+  }, /*#__PURE__*/React.createElement("a", {
+    href: "mailto:human-robot-dialogue@googlegroups.com"
+  }, "human-robot-dialogue@googlegroups.com")))), /*#__PURE__*/React.createElement("div", {
     className: "foot-logo-wrap"
   }, /*#__PURE__*/React.createElement("img", {
     src: "iros-logo.png",
