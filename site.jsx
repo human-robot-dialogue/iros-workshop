@@ -272,7 +272,7 @@ function Schematic() {
 
 /* ================================================================ sections */
 
-function Nav() {
+function Nav({ theme, onToggleTheme }) {
   return (
     <header className="nav">
       <div className="container nav-inner">
@@ -281,11 +281,31 @@ function Nav() {
           <span>HRD&nbsp;·&nbsp;IROS&nbsp;2026</span>
           <img src="iros-logo.png" alt="IROS 2026" className="brand-logo" />
         </a>
-        <nav className="nav-links">
-          {NAV.map((n) => (
-            <a key={n.id} href={`#${n.id}`}>{n.label}</a>
-          ))}
-        </nav>
+        <div className="nav-right">
+          <nav className="nav-links">
+            {NAV.map((n) => (
+              <a key={n.id} href={`#${n.id}`}>{n.label}</a>
+            ))}
+          </nav>
+          <button
+            type="button"
+            className="theme-toggle"
+            onClick={onToggleTheme}
+            aria-label={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+            title={theme === "dark" ? "Switch to light mode" : "Switch to dark mode"}
+          >
+            {theme === "dark" ? (
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="4" />
+                <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+              </svg>
+            ) : (
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+              </svg>
+            )}
+          </button>
+        </div>
       </div>
     </header>
   );
@@ -653,7 +673,14 @@ function SiteTweaks({ t, setTweak }) {
 /* ================================================================ root */
 
 function App() {
-  const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
+  const initialDefaults = useMemo(() => {
+    try {
+      const saved = localStorage.getItem("hrd-theme");
+      if (saved === "light" || saved === "dark") return { ...TWEAK_DEFAULTS, theme: saved };
+    } catch (e) {}
+    return TWEAK_DEFAULTS;
+  }, []);
+  const [t, setTweak] = useTweaks(initialDefaults);
 
   // sync root attributes for theme / density / fontPair / accent
   useEffect(() => {
@@ -665,11 +692,14 @@ function App() {
     // pick legible text-on-accent — light accent => dark ink, dark accent => light ink
     const accentLight = isLight(t.accent);
     r.style.setProperty("--accent-ink", accentLight ? "#0b0b0c" : "#ffffff");
+    try { localStorage.setItem("hrd-theme", t.theme); } catch (e) {}
   }, [t]);
+
+  const toggleTheme = () => setTweak("theme", t.theme === "dark" ? "light" : "dark");
 
   return (
     <>
-      <Nav />
+      <Nav theme={t.theme} onToggleTheme={toggleTheme} />
       <Hero layout={t.heroLayout} />
       <Overview />
       <Topics />

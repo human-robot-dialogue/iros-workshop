@@ -216,6 +216,30 @@ p { margin: 0; }
 }
 .nav-links a:hover { color: var(--fg); }
 
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 999px;
+  border: 1px solid var(--rule);
+  background: var(--chip-bg);
+  color: var(--fg-soft);
+  cursor: pointer;
+  padding: 0;
+  transition: color .15s, border-color .15s, background .15s;
+}
+.theme-toggle:hover {
+  color: var(--fg);
+  border-color: var(--accent);
+}
+
 @media (max-width: 920px) {
   .nav-links { display: none; }
 }

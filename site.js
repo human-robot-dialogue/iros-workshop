@@ -481,7 +481,10 @@ function Schematic() {
 
 /* ================================================================ sections */
 
-function Nav() {
+function Nav({
+  theme,
+  onToggleTheme
+}) {
   return /*#__PURE__*/React.createElement("header", {
     className: "nav"
   }, /*#__PURE__*/React.createElement("div", {
@@ -495,12 +498,48 @@ function Nav() {
     src: "iros-logo.png",
     alt: "IROS 2026",
     className: "brand-logo"
-  })), /*#__PURE__*/React.createElement("nav", {
+  })), /*#__PURE__*/React.createElement("div", {
+    className: "nav-right"
+  }, /*#__PURE__*/React.createElement("nav", {
     className: "nav-links"
   }, NAV.map(n => /*#__PURE__*/React.createElement("a", {
     key: n.id,
     href: `#${n.id}`
-  }, n.label)))));
+  }, n.label))), /*#__PURE__*/React.createElement("button", {
+    type: "button",
+    className: "theme-toggle",
+    onClick: onToggleTheme,
+    "aria-label": theme === "dark" ? "Switch to light mode" : "Switch to dark mode",
+    title: theme === "dark" ? "Switch to light mode" : "Switch to dark mode"
+  }, theme === "dark" ? /*#__PURE__*/React.createElement("svg", {
+    width: "16",
+    height: "16",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    stroke: "currentColor",
+    strokeWidth: "2",
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    "aria-hidden": "true"
+  }, /*#__PURE__*/React.createElement("circle", {
+    cx: "12",
+    cy: "12",
+    r: "4"
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"
+  })) : /*#__PURE__*/React.createElement("svg", {
+    width: "16",
+    height: "16",
+    viewBox: "0 0 24 24",
+    fill: "none",
+    stroke: "currentColor",
+    strokeWidth: "2",
+    strokeLinecap: "round",
+    strokeLinejoin: "round",
+    "aria-hidden": "true"
+  }, /*#__PURE__*/React.createElement("path", {
+    d: "M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"
+  }))))));
 }
 function Hero({
   layout
@@ -813,7 +852,17 @@ function SiteTweaks({
 /* ================================================================ root */
 
 function App() {
-  const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
+  const initialDefaults = useMemo(() => {
+    try {
+      const saved = localStorage.getItem("hrd-theme");
+      if (saved === "light" || saved === "dark") return {
+        ...TWEAK_DEFAULTS,
+        theme: saved
+      };
+    } catch (e) {}
+    return TWEAK_DEFAULTS;
+  }, []);
+  const [t, setTweak] = useTweaks(initialDefaults);
 
   // sync root attributes for theme / density / fontPair / accent
   useEffect(() => {
@@ -825,8 +874,15 @@ function App() {
     // pick legible text-on-accent — light accent => dark ink, dark accent => light ink
     const accentLight = isLight(t.accent);
     r.style.setProperty("--accent-ink", accentLight ? "#0b0b0c" : "#ffffff");
+    try {
+      localStorage.setItem("hrd-theme", t.theme);
+    } catch (e) {}
   }, [t]);
-  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Nav, null), /*#__PURE__*/React.createElement(Hero, {
+  const toggleTheme = () => setTweak("theme", t.theme === "dark" ? "light" : "dark");
+  return /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(Nav, {
+    theme: t.theme,
+    onToggleTheme: toggleTheme
+  }), /*#__PURE__*/React.createElement(Hero, {
     layout: t.heroLayout
   }), /*#__PURE__*/React.createElement(Overview, null), /*#__PURE__*/React.createElement(Topics, null), /*#__PURE__*/React.createElement(Dates, null), /*#__PURE__*/React.createElement(CFP, null), /*#__PURE__*/React.createElement(Program, null), /*#__PURE__*/React.createElement(Speakers, null), /*#__PURE__*/React.createElement(Committee, {
     id: "organizers",
