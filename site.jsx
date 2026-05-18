@@ -22,7 +22,7 @@ const NAV = [
   { id: "program",    label: "Program" },
   { id: "speakers",   label: "Speakers" },
   { id: "organizers", label: "Committee" },
-  { id: "sponsors",   label: "Sponsors" },
+  // { id: "sponsors",   label: "Sponsors" },
 ];
 
 const TOPICS = [
@@ -711,7 +711,7 @@ function App() {
       <Speakers />
       <Committee id="organizers" label="Organizing committee" people={ORGANIZERS} role="Organizer" />
       <Committee id="advisory"   label="Advisory committee"   people={ADVISORY}   role="Advisory" />
-      <Sponsors />
+      {/* <Sponsors /> */}
       <Footer />
       <SiteTweaks t={t} setTweak={setTweak} />
     </>

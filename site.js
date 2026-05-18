@@ -39,10 +39,9 @@ const NAV = [{
 }, {
   id: "organizers",
   label: "Committee"
-}, {
-  id: "sponsors",
-  label: "Sponsors"
-}];
+}
+// { id: "sponsors",   label: "Sponsors" },
+];
 const TOPICS = [{
   n: "01",
   title: "Motivation",
@@ -902,7 +901,7 @@ function App() {
     label: "Advisory committee",
     people: ADVISORY,
     role: "Advisory"
-  }), /*#__PURE__*/React.createElement(Sponsors, null), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(SiteTweaks, {
+  }), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(SiteTweaks, {
     t: t,
     setTweak: setTweak
   }));
