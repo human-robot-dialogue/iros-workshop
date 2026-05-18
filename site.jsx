@@ -136,6 +136,38 @@ function Monogram({ name }) {
   return <span className="monogram">{initials(name)}</span>;
 }
 
+function HRDLogo({ size = 28, withWordmark = false }) {
+  return (
+    <span className={withWordmark ? "hrd-logo with-wordmark" : "hrd-logo"}>
+      <svg className="hrd-mark" width={size} height={size} viewBox="0 0 32 32" aria-hidden="true">
+        <defs>
+          <marker id="hrd-arrow-h" viewBox="0 0 6 6" refX="5.5" refY="3"
+                  markerWidth="4" markerHeight="4" orient="auto">
+            <path d="M 0 0 L 6 3 L 0 6 Z" className="hrd-tick-h" />
+          </marker>
+          <marker id="hrd-arrow-r" viewBox="0 0 6 6" refX="5.5" refY="3"
+                  markerWidth="4" markerHeight="4" orient="auto">
+            <path d="M 0 0 L 6 3 L 0 6 Z" className="hrd-tick-r" />
+          </marker>
+        </defs>
+        <path d="M 8 16 C 8 6.4, 18.24 4.48, 22.34 10.24"
+              className="hrd-arc-h" markerEnd="url(#hrd-arrow-h)" />
+        <path d="M 24 16 C 24 25.6, 13.76 27.52, 9.66 21.76"
+              className="hrd-arc-r" markerEnd="url(#hrd-arrow-r)" />
+        <circle cx="8"  cy="16" r="6" className="hrd-h" />
+        <circle cx="24" cy="16" r="6" className="hrd-r" />
+      </svg>
+      {withWordmark && (
+        <span className="hrd-wordmark">
+          <span className="hrd-wm-1">Human</span>
+          <span className="hrd-wm-dash">–</span>
+          <span className="hrd-wm-2">Robot Dialogue</span>
+        </span>
+      )}
+    </span>
+  );
+}
+
 function Person({ p, role }) {
   return (
     <div className="person">
@@ -245,7 +277,7 @@ function Nav() {
     <header className="nav">
       <div className="container nav-inner">
         <a href="#top" className="brand">
-          <span className="dot" />
+          <HRDLogo size={26} />
           <span>HRD&nbsp;·&nbsp;IROS&nbsp;2026</span>
           <img src="iros-logo.png" alt="IROS 2026" className="brand-logo" />
         </a>
@@ -524,7 +556,7 @@ function Footer() {
         <div className="foot-grid">
           <div>
             <h4>Workshop</h4>
-            <div className="foot-mark">Human–Robot Dialogue · IROS 2026</div>
+            <HRDLogo size={44} withWordmark />
             <p style={{ marginTop: 12, color: "var(--muted)", fontSize: 13 }}>
               A half-day workshop on leveraging dialogue to improve robot learning
               and human-robot interaction.

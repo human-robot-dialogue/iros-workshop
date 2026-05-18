@@ -243,6 +243,68 @@ function Monogram({
     className: "monogram"
   }, initials(name));
 }
+function HRDLogo({
+  size = 28,
+  withWordmark = false
+}) {
+  return /*#__PURE__*/React.createElement("span", {
+    className: withWordmark ? "hrd-logo with-wordmark" : "hrd-logo"
+  }, /*#__PURE__*/React.createElement("svg", {
+    className: "hrd-mark",
+    width: size,
+    height: size,
+    viewBox: "0 0 32 32",
+    "aria-hidden": "true"
+  }, /*#__PURE__*/React.createElement("defs", null, /*#__PURE__*/React.createElement("marker", {
+    id: "hrd-arrow-h",
+    viewBox: "0 0 6 6",
+    refX: "5.5",
+    refY: "3",
+    markerWidth: "4",
+    markerHeight: "4",
+    orient: "auto"
+  }, /*#__PURE__*/React.createElement("path", {
+    d: "M 0 0 L 6 3 L 0 6 Z",
+    className: "hrd-tick-h"
+  })), /*#__PURE__*/React.createElement("marker", {
+    id: "hrd-arrow-r",
+    viewBox: "0 0 6 6",
+    refX: "5.5",
+    refY: "3",
+    markerWidth: "4",
+    markerHeight: "4",
+    orient: "auto"
+  }, /*#__PURE__*/React.createElement("path", {
+    d: "M 0 0 L 6 3 L 0 6 Z",
+    className: "hrd-tick-r"
+  }))), /*#__PURE__*/React.createElement("path", {
+    d: "M 8 16 C 8 6.4, 18.24 4.48, 22.34 10.24",
+    className: "hrd-arc-h",
+    markerEnd: "url(#hrd-arrow-h)"
+  }), /*#__PURE__*/React.createElement("path", {
+    d: "M 24 16 C 24 25.6, 13.76 27.52, 9.66 21.76",
+    className: "hrd-arc-r",
+    markerEnd: "url(#hrd-arrow-r)"
+  }), /*#__PURE__*/React.createElement("circle", {
+    cx: "8",
+    cy: "16",
+    r: "6",
+    className: "hrd-h"
+  }), /*#__PURE__*/React.createElement("circle", {
+    cx: "24",
+    cy: "16",
+    r: "6",
+    className: "hrd-r"
+  })), withWordmark && /*#__PURE__*/React.createElement("span", {
+    className: "hrd-wordmark"
+  }, /*#__PURE__*/React.createElement("span", {
+    className: "hrd-wm-1"
+  }, "Human"), /*#__PURE__*/React.createElement("span", {
+    className: "hrd-wm-dash"
+  }, "\u2013"), /*#__PURE__*/React.createElement("span", {
+    className: "hrd-wm-2"
+  }, "Robot Dialogue")));
+}
 function Person({
   p,
   role
@@ -427,8 +489,8 @@ function Nav() {
   }, /*#__PURE__*/React.createElement("a", {
     href: "#top",
     className: "brand"
-  }, /*#__PURE__*/React.createElement("span", {
-    className: "dot"
+  }, /*#__PURE__*/React.createElement(HRDLogo, {
+    size: 26
   }), /*#__PURE__*/React.createElement("span", null, "HRD\xA0\xB7\xA0IROS\xA02026"), /*#__PURE__*/React.createElement("img", {
     src: "iros-logo.png",
     alt: "IROS 2026",
@@ -643,9 +705,10 @@ function Footer() {
     className: "container"
   }, /*#__PURE__*/React.createElement("div", {
     className: "foot-grid"
-  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h4", null, "Workshop"), /*#__PURE__*/React.createElement("div", {
-    className: "foot-mark"
-  }, "Human\u2013Robot Dialogue \xB7 IROS 2026"), /*#__PURE__*/React.createElement("p", {
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h4", null, "Workshop"), /*#__PURE__*/React.createElement(HRDLogo, {
+    size: 44,
+    withWordmark: true
+  }), /*#__PURE__*/React.createElement("p", {
     style: {
       marginTop: 12,
       color: "var(--muted)",
