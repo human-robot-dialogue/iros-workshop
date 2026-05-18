@@ -557,6 +557,15 @@ section:last-of-type { padding-bottom: var(--gap-section); }
 }
 
 /* ============================================================ schedule */
+.program-tba {
+  font-family: var(--display);
+  font-size: clamp(28px, 4vw, 42px);
+  font-style: italic;
+  color: var(--fg-soft);
+  text-align: center;
+  padding: 64px 0;
+  letter-spacing: -0.01em;
+}
 .schedule {
   display: grid;
   grid-template-columns: 1fr;

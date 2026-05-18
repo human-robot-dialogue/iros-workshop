@@ -576,20 +576,9 @@ function Program() {
     className: "container"
   }, /*#__PURE__*/React.createElement(SectionHead, {
     label: "Program"
-  }, "A tentative outline of the day."), /*#__PURE__*/React.createElement("div", {
-    className: "schedule"
-  }, PROGRAM.map((r, i) => /*#__PURE__*/React.createElement("div", {
-    key: i,
-    className: `sched-row kind-${r.kind}`
-  }, /*#__PURE__*/React.createElement("div", {
-    className: "t"
-  }, r.t), /*#__PURE__*/React.createElement("div", {
-    className: "title"
-  }, r.title), /*#__PURE__*/React.createElement("div", {
-    className: "who"
-  }, r.who)))), /*#__PURE__*/React.createElement("div", {
-    className: "sched-note"
-  }, "All times Eastern \xB7 Final program announced closer to the workshop date.")));
+  }), /*#__PURE__*/React.createElement("div", {
+    className: "program-tba"
+  }, "To be announced soon\u2026")));
 }
 function Speakers() {
   return /*#__PURE__*/React.createElement("section", {

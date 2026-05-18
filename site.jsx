@@ -446,9 +446,9 @@ function Program() {
   return (
     <section id="program">
       <div className="container">
-        <SectionHead label="Program">
-          A tentative outline of the day.
-        </SectionHead>
+        <SectionHead label="Program" />
+        <div className="program-tba">To be announced soon&hellip;</div>
+        {/* Program schedule hidden until finalized.
         <div className="schedule">
           {PROGRAM.map((r, i) => (
             <div key={i} className={`sched-row kind-${r.kind}`}>
@@ -461,6 +461,7 @@ function Program() {
         <div className="sched-note">
           All times Eastern · Final program announced closer to the workshop date.
         </div>
+        */}
       </div>
     </section>
   );
