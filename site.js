@@ -598,7 +598,7 @@ function Speakers() {
     className: "container"
   }, /*#__PURE__*/React.createElement(SectionHead, {
     label: "Speakers & Panelists"
-  }, "Seven voices shaping the conversation."), /*#__PURE__*/React.createElement("div", {
+  }), /*#__PURE__*/React.createElement("div", {
     className: "people-grid"
   }, SPEAKERS.map(p => /*#__PURE__*/React.createElement(Person, {
     key: p.name,
@@ -770,13 +770,11 @@ function App() {
   }), /*#__PURE__*/React.createElement(Overview, null), /*#__PURE__*/React.createElement(Topics, null), /*#__PURE__*/React.createElement(Dates, null), /*#__PURE__*/React.createElement(CFP, null), /*#__PURE__*/React.createElement(Program, null), /*#__PURE__*/React.createElement(Speakers, null), /*#__PURE__*/React.createElement(Committee, {
     id: "organizers",
     label: "Organizing committee",
-    title: "The team behind the workshop.",
     people: ORGANIZERS,
     role: "Organizer"
   }), /*#__PURE__*/React.createElement(Committee, {
     id: "advisory",
     label: "Advisory committee",
-    title: "Guidance from across the field.",
     people: ADVISORY,
     role: "Advisory"
   }), /*#__PURE__*/React.createElement(Sponsors, null), /*#__PURE__*/React.createElement(Footer, null), /*#__PURE__*/React.createElement(SiteTweaks, {

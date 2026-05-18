@@ -470,9 +470,7 @@ function Speakers() {
   return (
     <section id="speakers">
       <div className="container">
-        <SectionHead label="Speakers & Panelists">
-          Seven voices shaping the conversation.
-        </SectionHead>
+        <SectionHead label="Speakers & Panelists" />
         <div className="people-grid">
           {SPEAKERS.map((p) => (
             <Person key={p.name} p={p} role="Speaker" />
@@ -645,8 +643,8 @@ function App() {
       <CFP />
       <Program />
       <Speakers />
-      <Committee id="organizers" label="Organizing committee" title="The team behind the workshop." people={ORGANIZERS} role="Organizer" />
-      <Committee id="advisory"   label="Advisory committee"   title="Guidance from across the field." people={ADVISORY}   role="Advisory" />
+      <Committee id="organizers" label="Organizing committee" people={ORGANIZERS} role="Organizer" />
+      <Committee id="advisory"   label="Advisory committee"   people={ADVISORY}   role="Advisory" />
       <Sponsors />
       <Footer />
       <SiteTweaks t={t} setTweak={setTweak} />
