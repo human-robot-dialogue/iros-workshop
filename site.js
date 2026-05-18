@@ -83,15 +83,18 @@ const SPEAKERS = [{
 }, {
   name: "Dhruv Shah",
   aff: "Princeton University · Google DeepMind, USA",
-  photo: "photos/dhruv-shah.jpg"
+  photo: "photos/dhruv-shah.jpg",
+  role: "Panelist"
 }, {
   name: "Gabriel Skantze",
   aff: "KTH · Furhat Robotics, Sweden",
-  photo: "photos/gabriel-skantze.jpg"
+  photo: "photos/gabriel-skantze.jpg",
+  role: "Panelist"
 }, {
   name: "Matthew Marge",
   aff: "DARPA, USA",
-  photo: "photos/matthew-marge.jpg"
+  photo: "photos/matthew-marge.jpg",
+  role: "Panelist"
 }];
 const ORGANIZERS = [{
   name: "Jason Liu",
@@ -592,7 +595,7 @@ function Speakers() {
   }, SPEAKERS.map(p => /*#__PURE__*/React.createElement(Person, {
     key: p.name,
     p: p,
-    role: "Speaker"
+    role: p.role || "Speaker"
   })))));
 }
 function Committee({

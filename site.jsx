@@ -76,9 +76,9 @@ const SPEAKERS = [
   { name: "Jacob Andreas",   aff: "MIT, USA",                               photo: "photos/jacob-andreas.jpg" },
   { name: "Jesse Thomason",  aff: "USC, USA",                               photo: "photos/jesse-thomason.jpg" },
   { name: "Bahar Irfan",     aff: "Familiar Machines & Magic, USA",        photo: "photos/bahar-irfan.jpg" },
-  { name: "Dhruv Shah",      aff: "Princeton University · Google DeepMind, USA", photo: "photos/dhruv-shah.jpg" },
-  { name: "Gabriel Skantze", aff: "KTH · Furhat Robotics, Sweden",           photo: "photos/gabriel-skantze.jpg" },
-  { name: "Matthew Marge",   aff: "DARPA, USA",                             photo: "photos/matthew-marge.jpg" },
+  { name: "Dhruv Shah",      aff: "Princeton University · Google DeepMind, USA", photo: "photos/dhruv-shah.jpg",     role: "Panelist" },
+  { name: "Gabriel Skantze", aff: "KTH · Furhat Robotics, Sweden",           photo: "photos/gabriel-skantze.jpg", role: "Panelist" },
+  { name: "Matthew Marge",   aff: "DARPA, USA",                             photo: "photos/matthew-marge.jpg",   role: "Panelist" },
 ];
 
 const ORGANIZERS = [
@@ -474,7 +474,7 @@ function Speakers() {
         <SectionHead label="Speakers & Panelists" />
         <div className="people-grid">
           {SPEAKERS.map((p) => (
-            <Person key={p.name} p={p} role="Speaker" />
+            <Person key={p.name} p={p} role={p.role || "Speaker"} />
           ))}
         </div>
       </div>
