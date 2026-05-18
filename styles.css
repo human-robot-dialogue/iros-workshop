@@ -775,7 +775,7 @@ footer {
 }
 :root[data-fontpair="editorial"] .foot-mark { font-style: italic; }
 .foot-logo-wrap {
-  margin-top: 56px;
+  margin-top: 96px;
   display: flex;
   justify-content: center;
 }
