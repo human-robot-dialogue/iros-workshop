@@ -142,6 +142,12 @@ p { margin: 0; }
   display: inline-block;
   box-shadow: 0 0 0 4px color-mix(in oklab, var(--accent) 25%, transparent);
 }
+.brand-logo {
+  height: 1em;
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
+}
 .nav-links {
   display: flex;
   gap: 28px;
@@ -768,8 +774,19 @@ footer {
   max-width: 18ch;
 }
 :root[data-fontpair="editorial"] .foot-mark { font-style: italic; }
-.foot-legal {
+.foot-logo-wrap {
   margin-top: 56px;
+  display: flex;
+  justify-content: center;
+}
+.foot-logo {
+  height: 48px;
+  width: auto;
+  display: block;
+  opacity: 0.85;
+}
+.foot-legal {
+  margin-top: 20px;
   display: flex;
   justify-content: space-between;
   font-family: var(--mono);

@@ -426,7 +426,11 @@ function Nav() {
     className: "brand"
   }, /*#__PURE__*/React.createElement("span", {
     className: "dot"
-  }), /*#__PURE__*/React.createElement("span", null, "HRD\xA0\xB7\xA0IROS\xA02026")), /*#__PURE__*/React.createElement("nav", {
+  }), /*#__PURE__*/React.createElement("span", null, "HRD\xA0\xB7\xA0IROS\xA02026"), /*#__PURE__*/React.createElement("img", {
+    src: "iros-logo.png",
+    alt: "IROS 2026",
+    className: "brand-logo"
+  })), /*#__PURE__*/React.createElement("nav", {
     className: "nav-links"
   }, NAV.map(n => /*#__PURE__*/React.createElement("a", {
     key: n.id,
@@ -660,6 +664,12 @@ function Footer() {
       marginTop: 12
     }
   }, "Co-located with IROS 2026.")), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h4", null, "Contact"), /*#__PURE__*/React.createElement("p", null, "For questions about the workshop, papers, or sponsorship,", /*#__PURE__*/React.createElement("br", null), "reach out to the organizing committee."))), /*#__PURE__*/React.createElement("div", {
+    className: "foot-logo-wrap"
+  }, /*#__PURE__*/React.createElement("img", {
+    src: "iros-logo.png",
+    alt: "IROS 2026",
+    className: "foot-logo"
+  })), /*#__PURE__*/React.createElement("div", {
     className: "foot-legal"
   }, /*#__PURE__*/React.createElement("span", null, "\xA9 2026 \xB7 Human\u2013Robot Dialogue Workshop"), /*#__PURE__*/React.createElement("span", null, "IROS 2026 \xB7 Pittsburgh"))));
 }

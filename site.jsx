@@ -247,6 +247,7 @@ function Nav() {
         <a href="#top" className="brand">
           <span className="dot" />
           <span>HRD&nbsp;·&nbsp;IROS&nbsp;2026</span>
+          <img src="iros-logo.png" alt="IROS 2026" className="brand-logo" />
         </a>
         <nav className="nav-links">
           {NAV.map((n) => (
@@ -539,6 +540,9 @@ function Footer() {
             <h4>Contact</h4>
             <p>For questions about the workshop, papers, or sponsorship,<br />reach out to the organizing committee.</p>
           </div>
+        </div>
+        <div className="foot-logo-wrap">
+          <img src="iros-logo.png" alt="IROS 2026" className="foot-logo" />
         </div>
         <div className="foot-legal">
           <span>© 2026 · Human–Robot Dialogue Workshop</span>
