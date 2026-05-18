@@ -279,7 +279,7 @@ function Hero({ layout }) {
             </h1>
             <p className="hero-sub">
               Leveraging dialogue to improve robot learning and human-robot interaction.
-              A full-day workshop bringing together researchers across robotics, NLP, HRI,
+              A half-day workshop bringing together researchers across robotics, NLP, HRI,
               and dialogue systems to chart what embodied communication looks like next.
             </p>
 
@@ -287,7 +287,7 @@ function Hero({ layout }) {
               <dl className="hero-meta">
                 <div><dt>Date</dt><dd>Sept 27, 2026</dd></div>
                 <div><dt>Venue</dt><dd>Pittsburgh, USA</dd></div>
-                <div><dt>Format</dt><dd>Full-day, in-person</dd></div>
+                <div><dt>Format</dt><dd>Half-day, in-person</dd></div>
                 <div><dt>Submissions</dt><dd>TBA</dd></div>
               </dl>
             )}
@@ -307,7 +307,7 @@ function Hero({ layout }) {
               </div>
               <div className="info-card">
                 <span className="label">Format</span>
-                <span className="value">Full-day, in-person</span>
+                <span className="value">Half-day, in-person</span>
               </div>
               <div className="info-card">
                 <span className="label">Submissions</span>
@@ -525,7 +525,7 @@ function Footer() {
             <h4>Workshop</h4>
             <div className="foot-mark">Human–Robot Dialogue · IROS 2026</div>
             <p style={{ marginTop: 12, color: "var(--muted)", fontSize: 13 }}>
-              A full-day workshop on leveraging dialogue to improve robot learning
+              A half-day workshop on leveraging dialogue to improve robot learning
               and human-robot interaction.
             </p>
           </div>

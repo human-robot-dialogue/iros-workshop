@@ -462,9 +462,9 @@ function Hero({
     className: "nodash"
   }, "\u2013"), "Robot Dialogue"), /*#__PURE__*/React.createElement("p", {
     className: "hero-sub"
-  }, "Leveraging dialogue to improve robot learning and human-robot interaction. A full-day workshop bringing together researchers across robotics, NLP, HRI, and dialogue systems to chart what embodied communication looks like next."), layout === "editorial" && /*#__PURE__*/React.createElement("dl", {
+  }, "Leveraging dialogue to improve robot learning and human-robot interaction. A half-day workshop bringing together researchers across robotics, NLP, HRI, and dialogue systems to chart what embodied communication looks like next."), layout === "editorial" && /*#__PURE__*/React.createElement("dl", {
     className: "hero-meta"
-  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("dt", null, "Date"), /*#__PURE__*/React.createElement("dd", null, "Sept 27, 2026")), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("dt", null, "Venue"), /*#__PURE__*/React.createElement("dd", null, "Pittsburgh, USA")), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("dt", null, "Format"), /*#__PURE__*/React.createElement("dd", null, "Full-day, in-person")), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("dt", null, "Submissions"), /*#__PURE__*/React.createElement("dd", null, "TBA")))), layout === "schematic" && /*#__PURE__*/React.createElement(Schematic, null), layout === "split" && /*#__PURE__*/React.createElement("div", {
+  }, /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("dt", null, "Date"), /*#__PURE__*/React.createElement("dd", null, "Sept 27, 2026")), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("dt", null, "Venue"), /*#__PURE__*/React.createElement("dd", null, "Pittsburgh, USA")), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("dt", null, "Format"), /*#__PURE__*/React.createElement("dd", null, "Half-day, in-person")), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("dt", null, "Submissions"), /*#__PURE__*/React.createElement("dd", null, "TBA")))), layout === "schematic" && /*#__PURE__*/React.createElement(Schematic, null), layout === "split" && /*#__PURE__*/React.createElement("div", {
     className: "info-card-list"
   }, /*#__PURE__*/React.createElement("div", {
     className: "info-card"
@@ -484,7 +484,7 @@ function Hero({
     className: "label"
   }, "Format"), /*#__PURE__*/React.createElement("span", {
     className: "value"
-  }, "Full-day, in-person")), /*#__PURE__*/React.createElement("div", {
+  }, "Half-day, in-person")), /*#__PURE__*/React.createElement("div", {
     className: "info-card"
   }, /*#__PURE__*/React.createElement("span", {
     className: "label"
@@ -659,7 +659,7 @@ function Footer() {
       color: "var(--muted)",
       fontSize: 13
     }
-  }, "A full-day workshop on leveraging dialogue to improve robot learning and human-robot interaction.")), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h4", null, "Where & when"), /*#__PURE__*/React.createElement("p", null, "Sept 27, 2026", /*#__PURE__*/React.createElement("br", null), "Pittsburgh, USA"), /*#__PURE__*/React.createElement("p", {
+  }, "A half-day workshop on leveraging dialogue to improve robot learning and human-robot interaction.")), /*#__PURE__*/React.createElement("div", null, /*#__PURE__*/React.createElement("h4", null, "Where & when"), /*#__PURE__*/React.createElement("p", null, "Sept 27, 2026", /*#__PURE__*/React.createElement("br", null), "Pittsburgh, USA"), /*#__PURE__*/React.createElement("p", {
     style: {
       marginTop: 12
     }
