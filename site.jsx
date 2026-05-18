@@ -279,7 +279,8 @@ function Nav({ theme, onToggleTheme }) {
         <a href="#top" className="brand">
           <HRDLogo size={26} />
           <span>HRD&nbsp;·&nbsp;IROS&nbsp;2026</span>
-          <img src="iros-logo.png" alt="IROS 2026" className="brand-logo" />
+          <img src="iros-logo.png"      alt="IROS 2026" className="brand-logo brand-logo--dark" />
+          <img src="iros-logo-dark.png" alt="IROS 2026" className="brand-logo brand-logo--light" />
         </a>
         <div className="nav-right">
           <nav className="nav-links">
@@ -594,7 +595,8 @@ function Footer() {
           </div>
         </div>
         <div className="foot-logo-wrap">
-          <img src="iros-logo.png" alt="IROS 2026" className="foot-logo" />
+          <img src="iros-logo.png"      alt="IROS 2026" className="foot-logo foot-logo--dark" />
+          <img src="iros-logo-dark.png" alt="IROS 2026" className="foot-logo foot-logo--light" />
         </div>
         <div className="foot-legal">
           <span>© 2026 · Human–Robot Dialogue Workshop</span>

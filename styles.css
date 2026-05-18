@@ -148,6 +148,10 @@ p { margin: 0; }
   display: inline-block;
   vertical-align: middle;
 }
+:root[data-theme="dark"]  .brand-logo--light,
+:root[data-theme="light"] .brand-logo--dark { display: none; }
+:root[data-theme="dark"]  .foot-logo--light,
+:root[data-theme="light"] .foot-logo--dark  { display: none; }
 
 /* HRD lockup */
 .hrd-logo {

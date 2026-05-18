@@ -497,7 +497,11 @@ function Nav({
   }), /*#__PURE__*/React.createElement("span", null, "HRD\xA0\xB7\xA0IROS\xA02026"), /*#__PURE__*/React.createElement("img", {
     src: "iros-logo.png",
     alt: "IROS 2026",
-    className: "brand-logo"
+    className: "brand-logo brand-logo--dark"
+  }), /*#__PURE__*/React.createElement("img", {
+    src: "iros-logo-dark.png",
+    alt: "IROS 2026",
+    className: "brand-logo brand-logo--light"
   })), /*#__PURE__*/React.createElement("div", {
     className: "nav-right"
   }, /*#__PURE__*/React.createElement("nav", {
@@ -768,7 +772,11 @@ function Footer() {
   }, /*#__PURE__*/React.createElement("img", {
     src: "iros-logo.png",
     alt: "IROS 2026",
-    className: "foot-logo"
+    className: "foot-logo foot-logo--dark"
+  }), /*#__PURE__*/React.createElement("img", {
+    src: "iros-logo-dark.png",
+    alt: "IROS 2026",
+    className: "foot-logo foot-logo--light"
   })), /*#__PURE__*/React.createElement("div", {
     className: "foot-legal"
   }, /*#__PURE__*/React.createElement("span", null, "\xA9 2026 \xB7 Human\u2013Robot Dialogue Workshop"), /*#__PURE__*/React.createElement("span", null, "IROS 2026 \xB7 Pittsburgh"))));
