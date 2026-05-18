@@ -5,7 +5,7 @@ const { useState, useEffect, useMemo } = React;
 
 // --- defaults the host can rewrite ---
 const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
-  "theme": "light",
+  "theme": "dark",
   "accent": "#ff5b35",
   "fontPair": "editorial",
   "heroLayout": "schematic",
