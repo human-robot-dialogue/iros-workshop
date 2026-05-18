@@ -143,7 +143,7 @@ p { margin: 0; }
   box-shadow: 0 0 0 4px color-mix(in oklab, var(--accent) 25%, transparent);
 }
 .brand-logo {
-  height: 1em;
+  height: 28px;
   width: auto;
   display: inline-block;
   vertical-align: middle;
@@ -780,10 +780,10 @@ footer {
   justify-content: center;
 }
 .foot-logo {
-  height: 48px;
+  height: 110px;
   width: auto;
   display: block;
-  opacity: 0.85;
+  opacity: 0.9;
 }
 .foot-legal {
   margin-top: 20px;
