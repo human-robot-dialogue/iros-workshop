@@ -16,10 +16,10 @@
       if (saved === 'light' || saved === 'dark') {
         document.documentElement.dataset.theme = saved;
       } else {
-        document.documentElement.dataset.theme = 'dark';
+        document.documentElement.dataset.theme = 'light';
       }
     } catch (e) {
-      document.documentElement.dataset.theme = 'dark';
+      document.documentElement.dataset.theme = 'light';
     }
   })();
 </script>
